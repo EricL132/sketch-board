@@ -1,0 +1,92 @@
+.drawing-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #121212;
+}
+
+canvas {
+    background-color: white;
+    border: 1px solid cornflowerblue;
+}
+
+.tools-container {
+    margin-top: -4px;
+    padding: 1rem;
+    background-color: cornflowerblue;
+    display: flex;
+    width: 650px;
+    position: relative;
+}
+
+.tools-container .size-button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    padding: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.tools-container .size-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.tools-container .size-button:active {
+    border: 1px solid cornflowerblue;
+}
+
+.tools-container span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0.25rem;
+    background-color: white;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#color {
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0.25rem;
+    background-color: white;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.position-right {
+    position: absolute;
+    right: 15px;
+}
+
+@media (max-width: 700px) {
+    canvas {
+        width: 90%;
+        height: 90%;
+        background-color: white;
+        border: 1px solid cornflowerblue;
+    }
+
+    .tools-container {
+        margin-top: -4px;
+        padding: 1rem;
+        background-color: cornflowerblue;
+        display: flex;
+        width: 90%;
+    }
+}
