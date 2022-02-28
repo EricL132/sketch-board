@@ -69,7 +69,7 @@ const App = () => {
     };
     //Decrease marker size by 1
     const handleSubSize = () => {
-        setDrawSize(drawSize - 1);
+        if(drawSize!==1) setDrawSize(drawSize - 1);
     };
     //Clears board
     const handleClear = () => {
@@ -86,22 +86,22 @@ const App = () => {
                 onTouchMove={handleGetCurrentMousePosition}
                 onMouseUp={handleMouseUp}
                 onMouseOut={handleMouseUp}
-                width="650"
-                height="600"
+                width={window.innerWidth}
+                height={window.innerHeight}
                 id="canvas"
                 className="drawing-canvas"
                 ref={canvasEle}
             ></canvas>
             <div className="tools-container">
-                <button onClick={handleSubSize} className="size-button">
+                <button onClick={handleSubSize} className="d-button border-5px">
                     <i className="fas fa-minus"></i>
                 </button>
-                <span>{drawSize}</span>
-                <button onClick={handleAddSize} className="size-button">
+                <span className="span-pen-size margin-side-5px border-5px">{drawSize}</span>
+                <button onClick={handleAddSize} className="d-button border-5px">
                     <i className="fas fa-plus"></i>
                 </button>
-                <input type="color" id="color" ref={colorEle}></input>
-                <button onClick={handleClear} className="size-button position-right">
+                <input type="color" ref={colorEle} className="color-circle margin-side-5px border-5px" ></input>
+                <button onClick={handleClear} className="d-button border-5px">
                     <i className="fas fa-trash"></i>
                 </button>
             </div>

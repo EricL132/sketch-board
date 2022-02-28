@@ -1,83 +1,76 @@
 .drawing-container {
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     flex-direction: column;
     background-color: #121212;
 }
 
-canvas {
+.drawing-canvas {
     background-color: white;
     border: 1px solid cornflowerblue;
+    height: 100vh;
+    width: 100vw;
 }
 
 .tools-container {
     margin-top: -4px;
     padding: 1rem;
-    background-color: cornflowerblue;
+    background-color: #121212;
     display: flex;
-    width: 650px;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
 }
 
-.tools-container .size-button {
+.d-button {
     width: 40px;
     height: 40px;
     background-color: white;
     text-align: center;
     padding: 0.5rem;
-    outline: none;
     cursor: pointer;
-    border: none;
 }
 
-.tools-container .size-button:hover {
+.d-button:hover {
     background-color: black;
     color: white;
 }
 
-.tools-container .size-button:active {
+.d-button:active {
     border: 1px solid cornflowerblue;
 }
 
-.tools-container span {
+.span-pen-size {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
     width: 40px;
     height: 40px;
     padding: 0.25rem;
-    background-color: white;
-    text-align: center;
-    margin-right: 5px;
-    margin-left: 5px;
+    user-select: none;
 }
 
-#color {
-    outline: none;
-    align-items: center;
-    justify-content: center;
+.color-circle {
+    padding: 0;
     width: 40px;
     height: 40px;
-    padding: 0.25rem;
-    background-color: white;
-    text-align: center;
-    margin-right: 5px;
-    margin-left: 5px;
     cursor: pointer;
+    padding: 8px;
 }
-
-.position-right {
-    position: absolute;
-    right: 15px;
+.border-5px {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.margin-side-5px {
+    margin: 0 5px;
 }
 
 @media (max-width: 700px) {
-    canvas {
-        width: 90%;
-        height: 90%;
+    .drawing-canvas {
         background-color: white;
         border: 1px solid cornflowerblue;
     }
